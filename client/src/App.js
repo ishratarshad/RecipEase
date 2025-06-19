@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import RecipeForm from './components/RecipeForm';
 import RecipeList from './components/RecipeList';
 import './App.css';
@@ -7,14 +8,54 @@ function App() {
   const [filters, setFilters] = useState({
     allergies: [],
     diet: 'none',
-    mealType: 'any',
+    mealType: 'any'
   });
+
+  const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      if (!filters) return;
+
+      setLoading(true);
+      setError('');
+
+      try {
+        const response = await axios.get(
+          'https://api.spoonacular.com/recipes/complexSearch',
+          {
+            params: {
+              diet: filters.diet !== 'none' ? filters.diet : undefined,
+              intolerances: filters.allergies.join(',') || undefined,
+              type: filters.mealType !== 'any' ? filters.mealType : undefined,
+              addRecipeInformation: true,
+              number: 6,
+              apiKey: process.env.REACT_APP_SPOONACULAR_KEY
+            }
+          }
+        );
+
+        setRecipes(response.data.results || []);
+      } catch (err) {
+        setError('Failed to fetch recipes.');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRecipes();
+  }, [filters]);
 
   return (
     <div className="App">
       <h1>RecipEase</h1>
       <RecipeForm onFilter={setFilters} />
-      <RecipeList filters={filters} />
+      {loading && <p>Loading recipes...</p>}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <RecipeList recipes={recipes} />
     </div>
   );
 }

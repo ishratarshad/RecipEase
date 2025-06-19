@@ -1,72 +1,54 @@
-// src/components/RecipeList.jsx
 import React from 'react';
 
-const dummyRecipes = [
-  {
-    title: 'Quinoa Salad',
-    ingredients: ['quinoa', 'cucumber', 'lemon'],
-    diet: 'low-carb',
-    mealType: 'lunch',
-    instructions: 'Mix ingredients and chill for 30 mins.',
-  },
-  {
-    title: 'Lentil Soup',
-    ingredients: ['lentils', 'onion', 'carrots'],
-    diet: 'low-sugar',
-    mealType: 'dinner',
-    instructions: 'Simmer in pot for 40 mins.',
-  },
-  {
-    title: 'Peanut Butter Cookies',
-    ingredients: ['peanut butter', 'sugar', 'eggs'],
-    diet: 'none',
-    mealType: 'breakfast',
-    instructions: 'Mix and bake at 350°F for 10 minutes.',
-  },
-];
-
-const RecipeList = ({ filters }) => {
-  const isSafe = (recipe) => {
-    const { allergies, diet, mealType } = filters;
-
-    // Check allergies
-    if (
-      allergies.length > 0 &&
-      allergies.some((filter) =>
-        recipe.ingredients.join(' ').toLowerCase().includes(filter)
-      )
-    ) {
-      return false;
-    }
-
-    // Check diet
-    if (diet !== 'none' && recipe.diet !== diet) {
-      return false;
-    }
-
-    // Check meal type
-    if (mealType !== 'any' && recipe.mealType !== mealType) {
-      return false;
-    }
-
-    return true;
-  };
-
-  const filteredRecipes = dummyRecipes.filter(isSafe);
-
+const RecipeList = ({ recipes }) => {
   return (
     <div>
       <h2>Recipes</h2>
-      {filteredRecipes.length === 0 ? (
-        <p>No matching recipes found for your preferences.</p>
+      {recipes.length === 0 ? (
+        <p>No matching recipes found.</p>
       ) : (
-        filteredRecipes.map((recipe, idx) => (
-          <div key={idx} style={{ border: '1px solid #ccc', margin: '10px', padding: '10px' }}>
+        recipes.map((recipe) => (
+          <div
+            key={recipe.id}
+            style={{
+              border: '1px solid #ccc',
+              borderRadius: '8px',
+              margin: '20px auto',
+              padding: '16px',
+              maxWidth: '600px',
+              boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)',
+              backgroundColor: '#f9f9f9'
+            }}
+          >
             <h3>{recipe.title}</h3>
-            <p><strong>Ingredients:</strong> {recipe.ingredients.join(', ')}</p>
-            <p><strong>Instructions:</strong> {recipe.instructions}</p>
-            <p><strong>Diet:</strong> {recipe.diet}</p>
-            <p><strong>Meal Type:</strong> {recipe.mealType}</p>
+            <img
+              src={recipe.image}
+              alt={recipe.title}
+              width="100%"
+              style={{ borderRadius: '4px', marginBottom: '10px' }}
+            />
+
+            <p>
+              <strong>Ingredients:</strong>{' '}
+              {recipe.extendedIngredients?.length
+                ? recipe.extendedIngredients.map((ing) => ing.original).join(', ')
+                : 'No ingredients available.'}
+            </p>
+
+            <p>
+              <strong>Instructions:</strong>{' '}
+              {recipe.analyzedInstructions?.length > 0
+                ? recipe.analyzedInstructions[0].steps.map((step) => step.step).join(' ')
+                : 'No instructions available.'}
+            </p>
+
+            {recipe.sourceUrl && (
+              <p>
+                <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer">
+                  View full recipe
+                </a>
+              </p>
+            )}
           </div>
         ))
       )}
