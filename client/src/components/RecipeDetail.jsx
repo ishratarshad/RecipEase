@@ -56,6 +56,8 @@ const RecipeDetail = () => {
         style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }}
       />
 
+      <p><strong>Ready in:</strong> {recipe.readyInMinutes} minutes</p>
+
       <h3>Ingredients</h3>
       <ul>
         {recipe.extendedIngredients.map((ing, index) => (
@@ -74,8 +76,25 @@ const RecipeDetail = () => {
         <p>No instructions available.</p>
       )}
 
+      {/* Video Embed if available */}
+      {recipe.spoonacularSourceUrl &&
+        recipe.spoonacularSourceUrl.includes('youtube.com') && (
+          <div style={{ marginTop: '20px' }}>
+            <h3>Video Tutorial</h3>
+            <iframe
+              width="100%"
+              height="315"
+              src={recipe.spoonacularSourceUrl.replace('watch?v=', 'embed/')}
+              title="Video Tutorial"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        )}
+
       {recipe.sourceUrl && (
-        <p>
+        <p style={{ marginTop: '20px' }}>
           <a href={recipe.sourceUrl} target="_blank" rel="noopener noreferrer">
             View source recipe
           </a>
