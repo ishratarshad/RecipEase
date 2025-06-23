@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Home from './components/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
+
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
 import RecipeForm from './components/RecipeForm';
 import RecipeList from './components/RecipeList';
 import RecipeDetail from './components/RecipeDetail';
@@ -20,6 +23,7 @@ function App() {
   useEffect(() => {
     const fetchRecipes = async () => {
       if (!filters) return;
+
       setLoading(true);
       setError('');
 
@@ -52,12 +56,16 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>RecipEase</h1>
+        <Navbar />
+
         <Routes>
-          {/* NEW HOME ROUTE */}
+          {/* Home page with welcome and image slideshow */}
           <Route path="/" element={<Home />} />
 
-          {/* MOVED ORIGINAL FORM+LIST TO /search */}
+          {/* About page with info about RecipEase */}
+          <Route path="/about" element={<About />} />
+
+          {/* Search page with form and results */}
           <Route
             path="/search"
             element={
@@ -70,6 +78,7 @@ function App() {
             }
           />
 
+          {/* Detailed recipe view */}
           <Route path="/recipe/:id" element={<RecipeDetail />} />
         </Routes>
       </div>
