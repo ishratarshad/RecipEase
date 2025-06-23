@@ -15,6 +15,17 @@ const RecipeForm = ({ onFilter }) => {
       .map((a) => a.trim().toLowerCase())
       .filter((a) => a !== '');
 
+    // Prevent completely empty submission
+    const noInput =
+      allergyArray.length === 0 &&
+      (diet === 'none' || diet.trim() === '') &&
+      (mealType === 'any' || mealType.trim() === '');
+
+    if (noInput) {
+      setError('Please enter at least one filter to search.');
+      return;
+    }
+
     if (allergies.trim() !== '' && allergyArray.length === 0) {
       setError('Please enter at least one valid allergy or leave blank.');
       return;
