@@ -74,3 +74,5 @@ cd RecipEase
 cd client
 npm install
 npm start
+powershell -ExecutionPolicy Bypass -Command "npm install" //bypass needed on vscode
+
