@@ -64,41 +64,50 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 ---
 
 ## 1. Clone the GitHub repository
+
 Open a terminal (Command Prompt or PowerShell for Windows, Terminal app for macOS):
   git clone https://github.com/ishratarshad/RecipEase.git
   cd RecipEase/client
 
 ## 2. Install Node.js and npm
+
 Windows: Download and install from https://nodejs.org/en/download
 macOS: Use the same link, or if they use Homebrew:
   brew install node
 
 ## To verify it installed:
+  
   node -v
   npm -v
 
 ## 3. Install project dependencies
+
 Inside the client folder:
   npm install
 
 ## 4. Create a .env file
-## Still in the client folder:
+
+Still in the client folder:
   echo REACT_APP_SPOONACULAR_KEY=1cce3f15d36641499cad99a0741a462f > .env
 
-## macOS:
+macOS:
+
 echo "REACT_APP_SPOONACULAR_KEY=1cce3f15d36641499cad99a0741a462f" > .env
-## This key allows the app to fetch recipes from Spoonacular.
+This key allows the app to fetch recipes from Spoonacular.
 
 ## 6. Start the React app
 
 ## Once the key is set up:
-  npm start
-## This will open the app in your browser at:
-http://localhost:3000
 
-## Optional: If You Have Issues Running npm start on Windows
+  npm start
+  
+This will open the app in your browser at:
+  http://localhost:3000
+
 ## If you get an error like “running scripts is disabled,” run this once in PowerShell as admin:
+
   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+  
 ## Then try:
   npm start
 
