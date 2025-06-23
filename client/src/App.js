@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
+import Contact from './components/Contact';
 import RecipeForm from './components/RecipeForm';
 import RecipeList from './components/RecipeList';
 import RecipeDetail from './components/RecipeDetail';
@@ -62,10 +64,13 @@ function App() {
           {/* Home page with welcome and image slideshow */}
           <Route path="/" element={<Home />} />
 
-          {/* About page with info about RecipEase */}
+          {/* About page */}
           <Route path="/about" element={<About />} />
 
-          {/* Search page with form and results */}
+          {/* Contact page */}
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Search page with filters and recipe results */}
           <Route
             path="/search"
             element={
@@ -78,9 +83,11 @@ function App() {
             }
           />
 
-          {/* Detailed recipe view */}
+          {/* Single recipe detail */}
           <Route path="/recipe/:id" element={<RecipeDetail />} />
         </Routes>
+
+        <Footer />
       </div>
     </Router>
   );
