@@ -6,7 +6,7 @@
 - Bonnie Lei
 - Angela Yu
 
----
+----
 
 ## Project Description
 
