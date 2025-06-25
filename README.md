@@ -100,9 +100,7 @@ Run: cd client, then npm install
 
 Make sure you are in the client folder now
 
-Run (Windows): echo REACT_APP_SPOONACULAR_KEY=1cce3f15d36641499cad99a0741a462f > .env
 
-macOS: echo "REACT_APP_SPOONACULAR_KEY=1cce3f15d36641499cad99a0741a462f" > .env
 
 This key allows the app to fetch recipes from Spoonacular.
 
