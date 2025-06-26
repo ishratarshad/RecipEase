@@ -2,27 +2,137 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div style={{ padding: '40px', maxWidth: '600px', margin: '0 auto' }}>
-      <h2>Contact Us</h2>
-      <p>If you have questions or feedback, feel free to reach out to our team.</p>
+    <div
+      style={{
+        padding: '60px 20px',
+        maxWidth: '650px',
+        margin: '60px auto',
+        backgroundColor: '#fff0f5',
+        borderRadius: '16px',
+        boxShadow: '0 8px 24px rgba(255, 192, 203, 0.25)',
+        fontFamily: 'Poppins, sans-serif'
+      }}
+    >
+      <h2
+        style={{
+          color: '#ff80ab',
+          marginBottom: '20px',
+          textAlign: 'center',
+          fontSize: '2rem'
+        }}
+      >
+        Contact Us
+      </h2>
+
+      <p
+        style={{
+          fontSize: '1.1rem',
+          color: '#555',
+          marginBottom: '30px',
+          textAlign: 'center',
+          maxWidth: '500px',
+          marginLeft: 'auto',
+          marginRight: 'auto'
+        }}
+      >
+        We'd love to hear from you! Drop us a message and our team will get back to you soon.
+      </p>
 
       <form>
-        <div style={{ marginBottom: '15px' }}>
-          <label>Name</label><br />
-          <input type="text" name="name" style={{ width: '100%', padding: '8px' }} required />
+        <div style={{ marginBottom: '20px' }}>
+          <label
+            style={{
+              display: 'block',
+              marginBottom: '8px',
+              color: '#444',
+              fontWeight: '500'
+            }}
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            style={{
+              width: '100%',
+              padding: '12px',
+              border: '1px solid #ddd',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
+            required
+          />
         </div>
 
-        <div style={{ marginBottom: '15px' }}>
-          <label>Email</label><br />
-          <input type="email" name="email" style={{ width: '100%', padding: '8px' }} required />
+        <div style={{ marginBottom: '20px' }}>
+          <label
+            style={{
+              display: 'block',
+              marginBottom: '8px',
+              color: '#444',
+              fontWeight: '500'
+            }}
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            style={{
+              width: '100%',
+              padding: '12px',
+              border: '1px solid #ddd',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
+            required
+          />
         </div>
 
-        <div style={{ marginBottom: '15px' }}>
-          <label>Message</label><br />
-          <textarea name="message" rows="5" style={{ width: '100%', padding: '8px' }} required />
+        <div style={{ marginBottom: '20px' }}>
+          <label
+            style={{
+              display: 'block',
+              marginBottom: '8px',
+              color: '#444',
+              fontWeight: '500'
+            }}
+          >
+            Message
+          </label>
+          <textarea
+            name="message"
+            rows="5"
+            style={{
+              width: '100%',
+              padding: '12px',
+              border: '1px solid #ddd',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              resize: 'vertical'
+            }}
+            required
+          />
         </div>
 
-        <button type="submit" style={{ padding: '10px 20px' }}>Send</button>
+        <button
+          type="submit"
+          style={{
+            padding: '12px 24px',
+            backgroundColor: '#ff80ab',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '8px',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            width: '100%',
+            transition: 'background-color 0.3s'
+          }}
+          onMouseOver={(e) => (e.target.style.backgroundColor = '#ff5c99')}
+          onMouseOut={(e) => (e.target.style.backgroundColor = '#ff80ab')}
+        >
+          Send Message
+        </button>
       </form>
     </div>
   );

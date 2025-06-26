@@ -2,23 +2,91 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div style={{ padding: '40px', maxWidth: '800px', margin: '0 auto', fontFamily: 'Poppins, sans-serif' }}>
-      <h2 style={{ color: '#ff80ab', fontSize: '2rem', marginBottom: '20px' }}>About RecipEase</h2>
-      
-      <p style={{ fontSize: '1.1rem', color: '#555', lineHeight: '1.7' }}>
-        <strong>RecipEase</strong> is designed to make meal planning simple and joyful for people with dietary restrictions.
-        Whether you're allergic to nuts, following a gluten-free diet, or trying out veganism — RecipEase helps you find
-        personalized, safe, and delicious recipes, powered by the Spoonacular API.
-      </p>
+    <div
+      style={{
+        fontFamily: 'Poppins, sans-serif',
+        background: 'linear-gradient(to bottom right, #fdf6f9, #eafafc)',
+        padding: '60px 20px',
+        color: '#333',
+        minHeight: '100vh'
+      }}
+    >
+      <div
+        style={{
+          maxWidth: '900px',
+          margin: '0 auto',
+          background: '#fff',
+          padding: '50px 40px',
+          borderRadius: '16px',
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.05)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}
+      >
+        <h2
+          style={{
+            textAlign: 'center',
+            color: '#d65d90',
+            fontSize: '2.5rem',
+            marginBottom: '40px'
+          }}
+        >
+          About RecipEase
+        </h2>
 
-      <p style={{ fontSize: '1.1rem', color: '#555', marginTop: '20px', lineHeight: '1.7' }}>
-        Our mission is to support inclusive, health-conscious eating by providing a curated experience that
-        adapts to your unique needs — all in a clean, beautiful interface.
-      </p>
+        <section style={{ marginBottom: '40px', textAlign: 'center' }}>
+          <h3 style={{ color: '#ff80ab', fontSize: '1.6rem', marginBottom: '12px' }}>🌱 Our Mission</h3>
+          <p style={{
+            fontSize: '1.1rem',
+            lineHeight: '1.8',
+            maxWidth: '720px',
+            margin: '0 auto',
+            color: '#444'
+          }}>
+            RecipEase was created to support people with dietary restrictions in finding personalized,
+            delicious meals. Whether you're vegan, gluten-free, nut-free, or just curious —
+            our goal is to make healthy eating beautiful, simple, and joyful.
+          </p>
+        </section>
 
-      <p style={{ fontSize: '1.1rem', color: '#555', marginTop: '20px', lineHeight: '1.7' }}>
-        Built with React, integrated with Spoonacular's recipe database, and crafted with care by a passionate student team.
-      </p>
+        <section style={{ marginBottom: '40px', textAlign: 'center' }}>
+          <h3 style={{ color: '#ff80ab', fontSize: '1.6rem', marginBottom: '12px' }}>Our Team</h3>
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              fontSize: '1.1rem',
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '40px',
+              flexWrap: 'wrap',
+              marginTop: '10px',
+              color: '#333'
+            }}
+          >
+            <li>Ishrat Arshad</li>
+            <li>Shithila Urshi</li>
+            <li>Bonnie Lei</li>
+            <li>Angela Yu</li>
+          </ul>
+        </section>
+
+        <section style={{ textAlign: 'center' }}>
+          <h3 style={{ color: '#ff80ab', fontSize: '1.6rem', marginBottom: '12px' }}>💬 A Note From Us</h3>
+          <p style={{
+            fontSize: '1.1rem',
+            lineHeight: '1.8',
+            maxWidth: '720px',
+            margin: '0 auto',
+            color: '#444'
+          }}>
+            RecipEase is more than a recipe finder, it's a project born from care and empathy.
+            We're students and creators who wanted to make food accessible, beautiful, and fun for everyone.
+            Thanks for being part of the journey!
+          </p>
+        </section>
+      </div>
     </div>
   );
 };

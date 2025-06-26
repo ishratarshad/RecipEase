@@ -9,13 +9,11 @@ const RecipeForm = ({ onFilter }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Clean + validate allergies input
     const allergyArray = allergies
       .split(',')
       .map((a) => a.trim().toLowerCase())
       .filter((a) => a !== '');
 
-    // Prevent completely empty submission
     const noInput =
       allergyArray.length === 0 &&
       (diet === 'none' || diet.trim() === '') &&
@@ -36,22 +34,58 @@ const RecipeForm = ({ onFilter }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
-      <div>
-        <label htmlFor="allergy">Dietary Restrictions / Allergies:</label>
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        backgroundColor: '#fff0f5',
+        borderRadius: '15px',
+        padding: '30px',
+        margin: '40px auto',
+        width: '90%',
+        maxWidth: '600px',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
+        fontFamily: 'Poppins, sans-serif',
+        color: '#333',
+      }}
+    >
+      <h2 style={{ color: '#ff69b4', marginBottom: '20px' }}>Filter Your Recipes and Scroll Down: </h2>
+
+      <div style={{ marginBottom: '15px' }}>
+        <label htmlFor="allergy" style={{ fontWeight: '500' }}>
+          Dietary Restrictions / Allergies:
+        </label>
         <input
           id="allergy"
           type="text"
           placeholder="e.g. nuts, gluten, dairy"
           value={allergies}
           onChange={(e) => setAllergies(e.target.value)}
-          style={{ width: '300px', marginLeft: '10px' }}
+          style={{
+            width: '100%',
+            marginTop: '8px',
+            padding: '10px',
+            border: '1px solid #ddd',
+            borderRadius: '10px',
+            backgroundColor: '#fffafd',
+          }}
         />
       </div>
 
-      <div style={{ marginTop: '10px' }}>
-        <label htmlFor="diet">Diet Type: </label>
-        <select id="diet" value={diet} onChange={(e) => setDiet(e.target.value)}>
+      <div style={{ marginBottom: '15px' }}>
+        <label htmlFor="diet" style={{ fontWeight: '500' }}>Diet Type:</label>
+        <select
+          id="diet"
+          value={diet}
+          onChange={(e) => setDiet(e.target.value)}
+          style={{
+            width: '100%',
+            marginTop: '8px',
+            padding: '10px',
+            borderRadius: '10px',
+            border: '1px solid #ddd',
+            backgroundColor: '#fffafd',
+          }}
+        >
           <option value="none">No Diet</option>
           <option value="vegetarian">Vegetarian</option>
           <option value="vegan">Vegan</option>
@@ -61,9 +95,21 @@ const RecipeForm = ({ onFilter }) => {
         </select>
       </div>
 
-      <div style={{ marginTop: '10px' }}>
-        <label htmlFor="mealType">Meal Type: </label>
-        <select id="mealType" value={mealType} onChange={(e) => setMealType(e.target.value)}>
+      <div style={{ marginBottom: '15px' }}>
+        <label htmlFor="mealType" style={{ fontWeight: '500' }}>Meal Type:</label>
+        <select
+          id="mealType"
+          value={mealType}
+          onChange={(e) => setMealType(e.target.value)}
+          style={{
+            width: '100%',
+            marginTop: '8px',
+            padding: '10px',
+            borderRadius: '10px',
+            border: '1px solid #ddd',
+            backgroundColor: '#fffafd',
+          }}
+        >
           <option value="any">Any</option>
           <option value="breakfast">Breakfast</option>
           <option value="lunch">Lunch</option>
@@ -71,9 +117,24 @@ const RecipeForm = ({ onFilter }) => {
         </select>
       </div>
 
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && (
+        <p style={{ color: '#ff4d6d', fontWeight: '500', marginBottom: '15px' }}>{error}</p>
+      )}
 
-      <button type="submit" style={{ marginTop: '15px' }}>
+      <button
+        type="submit"
+        style={{
+          backgroundColor: '#ff80ab',
+          color: '#fff',
+          padding: '12px 20px',
+          border: 'none',
+          borderRadius: '10px',
+          cursor: 'pointer',
+          fontWeight: '600',
+          fontSize: '16px',
+          marginTop: '10px',
+        }}
+      >
         Find Recipes
       </button>
     </form>
