@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav style={{
+<<<<<<< HEAD
+=======
+      position: 'sticky',
+      top: '0px',
+      zIndex: '999',
+      backgroundColor: '#ffe4ec',
+      padding: '12px 24px',
+>>>>>>> 9c09aeef1a11f2edd7f67b7e8bba1fcf45567dbe
       display: 'flex',
       justifyContent: 'space-around',
       alignItems: 'center',
