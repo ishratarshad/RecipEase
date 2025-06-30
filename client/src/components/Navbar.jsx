@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+  {/*To detect if the user is on mobile or not*/ }
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const resizeBar = () => {
+      setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth > 768) setIsOpen(false);
+    };
+
+    window.addEventListener('resize', resizeBar);
+    return () => window.removeEventListener('resize', resizeBar);
+  }, []);
+
   return (
     <nav style={{
       display: 'flex',
@@ -19,6 +35,8 @@ const Navbar = () => {
       <Link
         to="/"
         style={{
+          display: 'flex',
+          justifyContent: isMobile ? 'space-between' : 'flex-start',
           textDecoration: 'none',
           color: '#ff80ab',
           fontWeight: 'bold',
@@ -28,13 +46,50 @@ const Navbar = () => {
         RecipEase
       </Link>
 
+      {/* Hamburger menu button when on mobile*/}
+      {isMobile && (
+        <div
+          onClick={toggleMenu}
+          style={{
+            cursor: 'pointer',
+            width: '25px',
+            height: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+          }}
+        >
+          <span
+            style={{ height: '3px', backgroundColor: '#ff80ab', borderRadius: '2px' }}
+          />
+          <span
+            style={{ height: '3px', backgroundColor: '#ff80ab', borderRadius: '2px' }}
+          />
+          <span
+            style={{ height: '3px', backgroundColor: '#ff80ab', borderRadius: '2px' }}
+          />
+        </div>
+      )}
+
+
       {/* Navigation links on the right */}
-      <div style={{ display: 'flex', gap: '30px' }}>
-        <Link to="/" style={navLinkStyle}>Home</Link>
-        <Link to="/search" style={navLinkStyle}>Search</Link>
-        <Link to="/about" style={navLinkStyle}>About</Link>
-        <Link to="/contact" style={navLinkStyle}>Contact</Link>
-      </div>
+
+      {(!isMobile || isOpen) && (
+        <div
+          style={{
+            display: 'flex',
+            gap: '30px',
+            width: isMobile ? '100%' : 'auto',
+            flexDirection: isMobile ? 'column' : 'row',
+            marginTop: isMobile ? '10px' : '0',
+          }}
+        >
+          <Link to="/" style={navLinkStyle}>Home</Link>
+          <Link to="/search" style={navLinkStyle}>Search</Link>
+          <Link to="/about" style={navLinkStyle}>About</Link>
+          <Link to="/contact" style={navLinkStyle}>Contact</Link>
+        </div>
+      )}
     </nav>
   );
 };
