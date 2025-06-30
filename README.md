@@ -1,5 +1,5 @@
 # RecipEase
-# link: https://therecipease.netlify.app/ 
+# web link: https://therecipease.netlify.app/ 
 ## Team Members
 - Ishrat Arshad
 - Shithila Urshi
