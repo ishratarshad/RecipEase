@@ -20,13 +20,13 @@ The goal is to make cooking safe, enjoyable, and stress-free— one plate at a t
 
 ---
 
-## Motivation
+## Motivation:
 
 Finding meals that align with allergies or dietary restrictions can be overwhelming. We've experienced the frustration of scrolling endlessly, checking ingredients, and still feeling unsure. RecipEase is built to take that stress away— helping users find meals that match their needs while offering peace of mind.
 
 ---
 
-## Technologies & Tools
+## Technologies & Tools:
 
 | Tool         | Purpose                                                       |
 |--------------|---------------------------------------------------------------|
