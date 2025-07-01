@@ -36,12 +36,16 @@ const Navbar = () => {
         to="/"
         style={{
           display: 'flex',
-          justifyContent: isMobile ? 'space-between' : 'flex-start',
           textDecoration: 'none',
           color: '#ff80ab',
           fontWeight: 'bold',
-          fontSize: '1.5rem'
+          fontSize: '1.5rem',
+          /* Mobile screen logo adjustment */
+          position: isMobile ? 'absolute' : 'static',
+          left: isMobile ? '50%' : 'auto',
+          transform: isMobile ? 'translateX(-50%)' : 'none',
         }}
+        onClick={() => setIsOpen(false)}
       >
         RecipEase
       </Link>
