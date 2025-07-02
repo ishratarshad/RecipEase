@@ -21,6 +21,7 @@ const Navbar = () => {
   return (
     <nav style={{
       display: 'flex',
+      flexDirection: isMobile ? 'column' : 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: '15px 40px',
@@ -61,6 +62,10 @@ const Navbar = () => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
+            position: 'sticky',
+            top: 0,
+            marginRight: 'auto',
+            zIndex: 1100
           }}
         >
           <span
