@@ -37,7 +37,7 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 
 ---
 
-## Timeline
+## Timeline:
 
 | Week | Milestone                                  |
 |------|---------------------------------------------|
@@ -51,7 +51,7 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 
 ---
 
-## Planned Features
+## Planned Features:
 
 - [x] Input form for dietary preferences
 - [x] Render recipes with title, ingredients, instructions
@@ -67,9 +67,9 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 https://www.figma.com/team_invite/redeem/I5uZIpzpNHIuAxFm8n9Uhu
 
 ---
-## How to Run Locally
+## How to Run Locally:
 
-## 1. Clone the GitHub repository
+## 1. Clone the GitHub repository:
 
 Open a terminal (Command Prompt or PowerShell for Windows, Terminal app for macOS) and run:
 
