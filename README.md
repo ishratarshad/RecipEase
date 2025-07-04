@@ -1,12 +1,5 @@
 # RecipEase:
 # web link: https://therecipease.netlify.app/ 
-## Team Members
-- Ishrat Arshad
-- Shithila Urshi
-- Bonnie Lei
-- Angela Yu
-
-----
 
 ## Project Description:
 
