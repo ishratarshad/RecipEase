@@ -9,7 +9,7 @@ RecipEase is a personalized recipe recommendation website for individuals with d
 - Preparation steps
 - Step-by-step instructional videos (if available)
 
-The goal is to make cooking safe, enjoyable, and stress-free— one plate at a time.
+The goal is to make cooking safe, enjoyable, and stress-free— one plate at a time!
 
 ---
 
