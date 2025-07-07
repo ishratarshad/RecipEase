@@ -41,7 +41,7 @@ const RecipeForm = ({ onFilter }) => {
         borderRadius: '15px',
         padding: '30px',
         margin: '40px auto',
-        width: '90%',
+        width: '85%',
         maxWidth: '600px',
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
         fontFamily: 'Poppins, sans-serif',
@@ -61,7 +61,7 @@ const RecipeForm = ({ onFilter }) => {
           value={allergies}
           onChange={(e) => setAllergies(e.target.value)}
           style={{
-            width: '100%',
+            width: '96%',
             marginTop: '8px',
             padding: '10px',
             border: '1px solid #ddd',

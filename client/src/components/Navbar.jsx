@@ -90,7 +90,7 @@ const Navbar = () => {
             gap: '30px',
             width: isMobile ? '100%' : 'auto',
             flexDirection: isMobile ? 'column' : 'row',
-            marginTop: isMobile ? '10px' : '0',
+            marginTop: isMobile ? '20px' : '0',
           }}
         >
           <Link to="/" style={navLinkStyle}>Home</Link>

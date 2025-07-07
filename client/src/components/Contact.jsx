@@ -54,7 +54,7 @@ const Contact = () => {
             type="text"
             name="name"
             style={{
-              width: '100%',
+              width: '95%',
               padding: '12px',
               border: '1px solid #ddd',
               borderRadius: '8px',
@@ -79,7 +79,7 @@ const Contact = () => {
             type="email"
             name="email"
             style={{
-              width: '100%',
+              width: '95%',
               padding: '12px',
               border: '1px solid #ddd',
               borderRadius: '8px',
@@ -104,7 +104,7 @@ const Contact = () => {
             name="message"
             rows="5"
             style={{
-              width: '100%',
+              width: '95%',
               padding: '12px',
               border: '1px solid #ddd',
               borderRadius: '8px',
