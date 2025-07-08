@@ -39,103 +39,105 @@ const Contact = () => {
       </p>
 
       <form>
-        <div style={{ marginBottom: '20px' }}>
-          <label
+        <div style={{ padding: '0 12px' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <label
+              style={{
+                display: 'block',
+                marginBottom: '8px',
+                color: '#444',
+                fontWeight: '500'
+              }}
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              style={{
+                width: '100%',
+                padding: '12px',
+                border: '1px solid #ddd',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                boxSizing: 'border-box'
+              }}
+              required
+            />
+          </div>
+
+          <div style={{ marginBottom: '20px' }}>
+            <label
+              style={{
+                display: 'block',
+                marginBottom: '8px',
+                color: '#444',
+                fontWeight: '500'
+              }}
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              style={{
+                width: '100%',
+                padding: '12px',
+                border: '1px solid #ddd',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                boxSizing: 'border-box'
+              }}
+              required
+            />
+          </div>
+
+          <div style={{ marginBottom: '20px' }}>
+            <label
+              style={{
+                display: 'block',
+                marginBottom: '8px',
+                color: '#444',
+                fontWeight: '500'
+              }}
+            >
+              Message
+            </label>
+            <textarea
+              name="message"
+              rows="5"
+              style={{
+                width: '100%',
+                padding: '12px',
+                border: '1px solid #ddd',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                resize: 'vertical',
+                boxSizing: 'border-box'
+              }}
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
             style={{
-              display: 'block',
-              marginBottom: '8px',
-              color: '#444',
-              fontWeight: '500'
-            }}
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            style={{
-              width: '95%',
-              padding: '12px',
-              border: '1px solid #ddd',
+              padding: '12px 24px',
+              backgroundColor: '#ff80ab',
+              color: '#fff',
+              border: 'none',
               borderRadius: '8px',
               fontSize: '1rem',
-              boxSizing: 'border-box'
+              cursor: 'pointer',
+              width: '100%',
+              transition: 'background-color 0.3s'
             }}
-            required
-          />
-        </div>
-
-        <div style={{ marginBottom: '20px' }}>
-          <label
-            style={{
-              display: 'block',
-              marginBottom: '8px',
-              color: '#444',
-              fontWeight: '500'
-            }}
+            onMouseOver={(e) => (e.target.style.backgroundColor = '#ff5c99')}
+            onMouseOut={(e) => (e.target.style.backgroundColor = '#ff80ab')}
           >
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            style={{
-              width: '95%',
-              padding: '12px',
-              border: '1px solid #ddd',
-              borderRadius: '8px',
-              fontSize: '1rem',
-              boxSizing: 'border-box'
-            }}
-            required
-          />
+            Send Message
+          </button>
         </div>
-
-        <div style={{ marginBottom: '20px' }}>
-          <label
-            style={{
-              display: 'block',
-              marginBottom: '8px',
-              color: '#444',
-              fontWeight: '500'
-            }}
-          >
-            Message
-          </label>
-          <textarea
-            name="message"
-            rows="5"
-            style={{
-              width: '95%',
-              padding: '12px',
-              border: '1px solid #ddd',
-              borderRadius: '8px',
-              fontSize: '1rem',
-              resize: 'vertical',
-              boxSizing: 'border-box'
-            }}
-            required
-          />
-        </div>
-
-        <button
-          type="submit"
-          style={{
-            padding: '12px 24px',
-            backgroundColor: '#ff80ab',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '8px',
-            fontSize: '1rem',
-            cursor: 'pointer',
-            width: '95%',
-            transition: 'background-color 0.3s'
-          }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = '#ff5c99')}
-          onMouseOut={(e) => (e.target.style.backgroundColor = '#ff80ab')}
-        >
-          Send Message
-        </button>
       </form>
     </div>
   );
