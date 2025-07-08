@@ -58,7 +58,8 @@ const Contact = () => {
               padding: '12px',
               border: '1px solid #ddd',
               borderRadius: '8px',
-              fontSize: '1rem'
+              fontSize: '1rem',
+              boxSizing: 'border-box'
             }}
             required
           />
@@ -83,7 +84,8 @@ const Contact = () => {
               padding: '12px',
               border: '1px solid #ddd',
               borderRadius: '8px',
-              fontSize: '1rem'
+              fontSize: '1rem',
+              boxSizing: 'border-box'
             }}
             required
           />
@@ -109,7 +111,8 @@ const Contact = () => {
               border: '1px solid #ddd',
               borderRadius: '8px',
               fontSize: '1rem',
-              resize: 'vertical'
+              resize: 'vertical',
+              boxSizing: 'border-box'
             }}
             required
           />
@@ -139,3 +142,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
