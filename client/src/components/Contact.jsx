@@ -128,7 +128,7 @@ const Contact = () => {
             borderRadius: '8px',
             fontSize: '1rem',
             cursor: 'pointer',
-            width: '100%',
+            width: '95%',
             transition: 'background-color 0.3s'
           }}
           onMouseOver={(e) => (e.target.style.backgroundColor = '#ff5c99')}
@@ -142,4 +142,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
