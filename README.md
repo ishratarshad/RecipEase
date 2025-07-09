@@ -1,14 +1,7 @@
-# RecipEase
+# RecipEase:
+# web link: https://therecipease.netlify.app/ 
 
-## Team Members
-- Ishrat Arshad
-- Shithila Urshi
-- Bonnie Lei
-- Angela Yu
-
-----
-
-## Project Description
+## Project Description:
 
 RecipEase is a personalized recipe recommendation website for individuals with dietary restrictions, allergies, or food preferences. Users simply input their needs, and RecipEase returns a curated list of recipes tailored to their lifestyle. Each recipe includes:
 
@@ -16,17 +9,17 @@ RecipEase is a personalized recipe recommendation website for individuals with d
 - Preparation steps
 - Step-by-step instructional videos (if available)
 
-The goal is to make cooking safe, enjoyable, and stress-free— one plate at a time.
+The goal is to make cooking safe, enjoyable, and stress-free— one plate at a time!
 
 ---
 
-## Motivation
+## Motivation:
 
 Finding meals that align with allergies or dietary restrictions can be overwhelming. We've experienced the frustration of scrolling endlessly, checking ingredients, and still feeling unsure. RecipEase is built to take that stress away— helping users find meals that match their needs while offering peace of mind.
 
 ---
 
-## Technologies & Tools
+## Technologies & Tools:
 
 | Tool         | Purpose                                                       |
 |--------------|---------------------------------------------------------------|
@@ -37,7 +30,7 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 
 ---
 
-## Timeline
+## Timeline:
 
 | Week | Milestone                                  |
 |------|---------------------------------------------|
@@ -51,7 +44,7 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 
 ---
 
-## Planned Features
+## Planned Features:
 
 - [x] Input form for dietary preferences
 - [x] Render recipes with title, ingredients, instructions
@@ -67,9 +60,9 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 https://www.figma.com/team_invite/redeem/I5uZIpzpNHIuAxFm8n9Uhu
 
 ---
-## How to Run Locally
+## How to Run Locally:
 
-## 1. Clone the GitHub repository
+## 1. Clone the GitHub repository:
 
 Open a terminal (Command Prompt or PowerShell for Windows, Terminal app for macOS) and run:
 
