@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
-  {/*To detect if the user is on mobile or not*/ }
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -91,6 +90,8 @@ const Navbar = () => {
             width: isMobile ? '100%' : 'auto',
             flexDirection: isMobile ? 'column' : 'row',
             marginTop: isMobile ? '20px' : '0',
+            alignItems: isMobile ? 'center' : 'unset',        
+            textAlign: isMobile ? 'center' : 'unset',
           }}
         >
           <Link to="/" style={navLinkStyle}>Home</Link>
