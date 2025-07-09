@@ -49,10 +49,10 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 - [x] Input form for dietary preferences
 - [x] Render recipes with title, ingredients, instructions
 - [x] Filter recipes based on user input
-- [ ] Embed instructional videos if available
-- [ ] Save favorite recipes using localStorage
-- [ ] Connect to a real recipe API (e.g., Spoonacular)
-- [ ] Polish UI for mobile, accessibility, and usability
+- [x] Embed instructional videos if available
+- [x] Save favorite recipes using localStorage
+- [x] Connect to a real recipe API (e.g., Spoonacular)
+- [x] Polish UI for mobile, accessibility, and usability
 
 ---
 
