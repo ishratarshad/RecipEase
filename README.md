@@ -84,12 +84,12 @@ Or, if you use Homebrew: brew install node
   
   npm -v
 
-## 3. Install project dependencies
+## 3. Install project dependencies:
 Make sure you are in the RecipEase folder
 
 Run: cd client, then npm install
 
-## 4. Create a .env file
+## 4. Create a .env file:
 
 Make sure you are in the client folder now
 
@@ -97,7 +97,7 @@ Make sure you are in the client folder now
 
 This key allows the app to fetch recipes from Spoonacular.
 
-## 6. Start the React app
+## 6. Start the React app:
 
 ### Once the key is set up:
 
