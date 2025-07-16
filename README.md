@@ -56,7 +56,7 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 
 ---
 
-## Figma
+## Figma:
 https://www.figma.com/design/XrG6Q5IUHZZ9C4puD7xpmK/RecipEase-UI?node-id=0-1&t=psd1WFFSgdRitMSl-0
 
 ---
