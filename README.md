@@ -1,5 +1,4 @@
 # RecipEase:
-# web link: https://therecipease.netlify.app/ 
 
 ## Project Description:
 
