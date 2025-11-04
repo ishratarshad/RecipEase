@@ -28,19 +28,6 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 
 ---
 
-## Timeline:
-
-| Week | Milestone                                  |
-|------|---------------------------------------------|
-| 1    | Team formed                                 |
-| 2    | Project idea and proposal completed         |
-| 3    | HTML/CSS frontend layout                    |
-| 4    | JavaScript and DOM functionality            |
-| 5    | Add videos, filters, polish UI              |
-| 6    | Debugging and testing                       |
-| 7    | Final presentation                          |
-
----
 
 ## Planned Features:
 
