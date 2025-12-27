@@ -1,5 +1,5 @@
 # RecipEase:
-https://recipeaseoffical.netlify.app/
+
 ## Project Description:
 
 RecipEase is a personalized recipe recommendation website for individuals with dietary restrictions, allergies, or food preferences. Users simply input their needs, and RecipEase returns a curated list of recipes tailored to their lifestyle. Each recipe includes:
