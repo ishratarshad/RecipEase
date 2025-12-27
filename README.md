@@ -30,20 +30,6 @@ Finding meals that align with allergies or dietary restrictions can be overwhelm
 ---
 
 
-## Planned Features:
-
-- [x] Input form for dietary preferences
-- [x] Render recipes with title, ingredients, instructions
-- [x] Filter recipes based on user input
-- [x] Embed instructional videos if available
-- [x] Save favorite recipes using localStorage
-- [x] Connect to API Spoonacular
-- [x] Polish UI for mobile, accessibility, and usability
-
----
-
-## Figma:
-https://www.figma.com/design/XrG6Q5IUHZZ9C4puD7xpmK/RecipEase-UI?node-id=0-1&t=psd1WFFSgdRitMSl-0
 
 ---
 ## How to Run Locally:
