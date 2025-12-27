@@ -1,11 +1,5 @@
 # RecipEase
 
-## Team Members
-- Ishrat Arshad
-- Shithila Urshi
-- Bonnie Lei
-- Angela Yu
-
 ---
 
 ## Project Description
